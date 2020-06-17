@@ -24,7 +24,9 @@ class MailSendersController < ApplicationController
   # POST /mail_senders
   # POST /mail_senders.json
   def create
-    @mail_sender = MailSender.new(mail_sender_params)
+    MailSender.send_password_to_emails(mail_sender_params[:csv_file])
+
+    # @mail_sender = MailSender.new(mail_sender_params)
 
     # respond_to do |format|
     #   if @mail_sender.save
@@ -35,6 +37,7 @@ class MailSendersController < ApplicationController
     #     format.json { render json: @mail_sender.errors, status: :unprocessable_entity }
     #   end
     # end
+    redirect_to root_path, notice: 'Mail successfully sent.'
   end
 
   # PATCH/PUT /mail_senders/1
