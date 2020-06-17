@@ -1,5 +1,5 @@
 class ContentSenderMailer < ApplicationMailer
-  default from: 'admin@swastikcollege.edu.np'
+  default from: 'Swastik College <admin@swastikcollege.edu.np>'
  
   def password_send(name, username, email, password)
     @name = name
