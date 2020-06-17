@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mail Senders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Csv file</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mail_senders.each do |mail_sender| %>
+      <tr>
+        <td><%= mail_sender.csv_file %></td>
+        <td><%= link_to 'Show', mail_sender %></td>
+        <td><%= link_to 'Edit', edit_mail_sender_path(mail_sender) %></td>
+        <td><%= link_to 'Destroy', mail_sender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mail Sender', new_mail_sender_path %>

@@ -1,0 +1,22 @@
+<%= form_with(model: mail_sender, local: true) do |form| %>
+  <% if mail_sender.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mail_sender.errors.count, "error") %> prohibited this mail_sender from being saved:</h2>
+
+      <ul>
+        <% mail_sender.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :csv_file %>
+    <%= form.file_field :csv_file %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
