@@ -9,6 +9,7 @@ class MailSender < ApplicationRecord
       password = row[2]
       email = row[4]
       ContentSenderMailer.password_send(name, username, email, password).deliver_now   # sends the email
+      Rails.logger.info "\n\nMail Successfully sent to #{name}\n\n"
     end
   end
 end
