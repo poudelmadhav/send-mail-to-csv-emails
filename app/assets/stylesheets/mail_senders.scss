@@ -1,3 +1,22 @@
 // Place all the styles related to the mail_senders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.actions .send-button {
+    min-width: 120px;
+    min-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    background: green;
+    color: white;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: .3s;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background: white;
+      color: green;
+    }
+}

@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'madhav@swastikcollege.edu.np'
+  default from: 'madhav@paudelmadhav.com.np'
   layout 'mailer'
 end

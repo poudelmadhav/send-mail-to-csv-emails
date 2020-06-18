@@ -1,5 +1,6 @@
-<h1>New Mail Sender</h1>
+<p id="notice"><%= notice %></p>
+
+<h1>Upload a csv file:</h1>
+<p>Currently it supports csv file with 4 columns: <b>name</b>, <b>username</b>, <b>Additional information</b>, and <b>email</b> resp.</p>
 
 <%= render 'form', mail_sender: @mail_sender %>
-
-<%= link_to 'Back', mail_senders_path %>
