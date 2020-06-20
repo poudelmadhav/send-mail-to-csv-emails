@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Upload a csv file:</h1>
-<p>Currently it supports csv file with 4 columns: <b>name</b>, <b>username</b>, <b>Additional information</b>, and <b>email</b> resp.</p>
+<p>
+  Currently it supports csv file with 4 columns: <b>name</b>, <b>username</b>, <b>Additional information</b>, and <b>email</b> resp. <%= link_to 'Download Sample', asset_path('sample.csv'), download: 'sample.csv' %>
+</p>
 
 <%= render 'form', mail_sender: @mail_sender %>
